@@ -1,1 +1,1 @@
-web: vendopr/bin/heroku-app-apache2 public/
+web: vendo/bin/heroku-app-apache2 public/
