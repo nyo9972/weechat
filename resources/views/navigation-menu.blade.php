@@ -221,8 +221,6 @@
 </nav>
 </div>
 <script>
-
-    console.log( "ready!" );
 var i = setInterval(function () {
     
     clearInterval(i);
@@ -231,5 +229,5 @@ var i = setInterval(function () {
     document.getElementById("loading").style.display = "none";
     document.getElementById("conteudo").style.display = "inline";
 
-}, 8000);
+}, 5000);
 </script>
