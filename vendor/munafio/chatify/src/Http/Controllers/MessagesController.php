@@ -138,7 +138,7 @@ class MessagesController extends Controller
                     $attachment_title = $file->getClientOriginalName();
                     // upload attachment and store the new name
                     $attachment = Str::uuid() . "." . $file->getClientOriginalExtension();
-                    $file->storeAs("public/" . config('chatify.attachments.folder'), $attachment);
+                    $file->storePubliclyAs("weechat/" . config('chatify.attachments.folder'), $attachment, 's3');
                 } else {
                     $error->status = 1;
                     $error->message = "File extension not allowed!";
@@ -215,7 +215,7 @@ class MessagesController extends Controller
         // send the response
         return Response::json([
             'count' => $query->count(),
-            'messages' => '<p class="message-hint center-el"><span>Say \'hi\' and start messaging</span></p>',
+            'messages' => '<p class="message-hint center-el"><span>Diga \'oi\' e comece a enviar mensagens</span></p>',
         ]);
     }
 
@@ -256,7 +256,7 @@ class MessagesController extends Controller
         ->get()
         ->unique('id');
 
-        $contacts = '<p class="message-hint center-el"><span>Your contact list is empty</span></p>';
+        $contacts = '<p class="message-hint center-el"><span>Sua lista de contato está vazia...</span></p>';
         $users = $users->where('id','!=',Auth::user()->id);
         if ($users->count() > 0) {
             // fetch contacts
@@ -367,7 +367,7 @@ class MessagesController extends Controller
         return Response::json([
             'records' => $records->count() > 0
                 ? $getRecords
-                : '<p class="message-hint center-el"><span>Nothing to show.</span></p>',
+                : '<p class="message-hint center-el"><span>Nada para mostrar...</span></p>',
             'addData' => 'html'
         ], 200);
     }
@@ -392,7 +392,7 @@ class MessagesController extends Controller
         }
         // send the response
         return Response::json([
-            'shared' => count($shared) > 0 ? $sharedPhotos : '<p class="message-hint"><span>Nothing shared yet</span></p>',
+            'shared' => count($shared) > 0 ? $sharedPhotos : '<p class="message-hint"><span>Nada compartilhado ainda...</span></p>',
         ], 200);
     }
 
