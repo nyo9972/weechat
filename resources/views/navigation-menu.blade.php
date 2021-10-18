@@ -1,3 +1,6 @@
+<div id="loading" style="display: block">
+    <img src="https://cdn.dribbble.com/users/1186261/screenshots/3718681/_______.gif" style="width:150px;height:150px;" />
+</div>
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -215,3 +218,16 @@
         </div>
     </div>
 </nav>
+<script>
+
+    console.log( "ready!" );
+var i = setInterval(function () {
+    
+    clearInterval(i);
+  
+    // O código desejado é apenas isto:
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("conteudo").style.display = "inline";
+
+}, 4000);
+</script>
