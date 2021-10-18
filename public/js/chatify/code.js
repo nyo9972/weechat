@@ -338,10 +338,10 @@ function IDinfo(id, type) {
        // avatar photo
        $(".messenger-infoView")
          .find(".avatar")
-         .css("background-image", 'url("'+'https://weechat.s3.sa-east-1.amazonaws.com/weechat/' + data.user_avatar.substr(51) + '")');
+         .css("background-image", 'url("'+'https://weechat.s3.sa-east-1.amazonaws.com/weechat/' + data.user_avatar.substr(25) + '")');
        $(".header-avatar").css(
          "background-image",
-         'url("'+'https://weechat.s3.sa-east-1.amazonaws.com/weechat/'+ data.user_avatar.substr(51) + '")'
+         'url("'+'https://weechat.s3.sa-east-1.amazonaws.com/weechat/'+ data.user_avatar.substr(25) + '")'
        );
        // Show shared and actions
        $(".messenger-infoView-btns .delete-conversation").show();
@@ -1209,7 +1209,7 @@ $(document).ready(function() {
      .css("background-image")
      .split(/"/)[1];
    $("#imageModalBox").show();
-   $("#imageModalBoxSrc").attr("src", $(this).attr('src'));
+   $("#imageModalBoxSrc").attr("src", src);
  });
  $(".imageModal-close").on("click", function() {
    $("#imageModalBox").hide();
