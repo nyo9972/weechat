@@ -1,4 +1,4 @@
-<div id="loading" style="display: block">
+<div align="center" id="loading" style="display: block">
     <img src="https://cdn.dribbble.com/users/1186261/screenshots/3718681/_______.gif" style="width:150px;height:150px;" />
 </div>
 <div id="conteudo" style="display: none">
