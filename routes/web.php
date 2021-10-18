@@ -18,5 +18,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return redirect('/weechat');
 })->name('dashboard');
