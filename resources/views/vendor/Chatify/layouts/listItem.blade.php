@@ -26,9 +26,8 @@
             @if($user->active_status)
                 <span class="activeStatus"></span>
             @endif
-        <div class="avatar av-m" 
-        style="background-image: url('{{ asset('/storage/'.config('chatify.user_avatar.folder').'/'.$user->avatar) }}');">
-        </div>
+        <img class="avatar av-m" 
+        src="{{ ('https://weechat.s3.sa-east-1.amazonaws.com/weechat/'.config('chatify.user_avatar.folder').'/'.$user->avatar) }}">
         </td>
         {{-- center side --}}
         <td>
@@ -67,9 +66,9 @@
     <tr data-action="0">
         {{-- Avatar side --}}
         <td>
-        <div class="avatar av-m"
-        style="background-image: url('{{ asset('/storage/'.config('chatify.user_avatar.folder').'/'.$user->avatar) }}');">
-        </div>
+        <img class="avatar av-m"
+       src="{{ ('https://weechat.s3.sa-east-1.amazonaws.com/weechat/'.config('chatify.user_avatar.folder').'/'.$user->avatar) }}">
+        <br>
         </td>
         {{-- center side --}}
         <td>

@@ -1,6 +1,6 @@
 <div class="favorite-list-item">
-    <div data-id="{{ $user->id }}" data-action="0" class="avatar av-m" 
-        style="background-image: url('{{ asset('/storage/'.config('chatify.user_avatar.folder').'/'.$user->avatar) }}');">
-    </div>
+    <img data-id="{{ $user->id }}" data-action="0" class="avatar av-m" 
+        src="{{ ('https://weechat.s3.sa-east-1.amazonaws.com/weechat/'.config('chatify.user_avatar.folder').'/'.$user->avatar) }}">
+    <br>
     <p>{{ strlen($user->name) > 5 ? substr($user->name,0,6).'..' : $user->name }}</p>
 </div>
