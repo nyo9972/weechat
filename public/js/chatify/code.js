@@ -338,10 +338,10 @@ function IDinfo(id, type) {
        // avatar photo
        $(".messenger-infoView")
          .find(".avatar")
-         .css("background-image", 'url("'+'https://weechat.s3.sa-east-1.amazonaws.com/weechat/' + data.user_avatar.substr(40) + '")');
+         .css("background-image", 'url("'+'https://weechat.s3.sa-east-1.amazonaws.com/weechat/' + data.user_avatar.substr(51) + '")');
        $(".header-avatar").css(
          "background-image",
-         'url("'+'https://weechat.s3.sa-east-1.amazonaws.com/weechat/'+ data.user_avatar.substr(40) + '")'
+         'url("'+'https://weechat.s3.sa-east-1.amazonaws.com/weechat/'+ data.user_avatar.substr(51) + '")'
        );
        // Show shared and actions
        $(".messenger-infoView-btns .delete-conversation").show();
