@@ -1,6 +1,7 @@
 <div id="loading" style="display: block">
     <img src="https://cdn.dribbble.com/users/1186261/screenshots/3718681/_______.gif" style="width:150px;height:150px;" />
 </div>
+<div id="conteudo" style="display: none">
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -218,6 +219,7 @@
         </div>
     </div>
 </nav>
+</div>
 <script>
 
     console.log( "ready!" );
