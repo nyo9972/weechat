@@ -17,7 +17,7 @@ use Illuminate\Support\Str;
 class MessagesController extends Controller
 {
     /**
-     * Authinticate the connection for pusher
+     * Authinticate the 
      *
      * @param Request $request
      * @return void
