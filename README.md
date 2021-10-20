@@ -28,6 +28,6 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - Up server:
  - sail up
  - sail up -d
+ <br>
  <a href="http://localhost/login"> Acess Link </a>
-- Container access: docker exec -it weechat_laravel.test_1 bash
 
